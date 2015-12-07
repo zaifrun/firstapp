@@ -5,23 +5,35 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    //The onCreate method will be called EVERY time
+    //our app comes into the foreground view for the user
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //This line sets the xml file "activity_main" in the layout folder as our main layout
         setContentView(R.layout.activity_main);
+        //we find our toolbar (defined in the activity_main.xml file)
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //we set this as our toolbar
         setSupportActionBar(toolbar);
 
+        //We find our floating action button - again defined in the activity_main
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //we also need to set a listener, so something happens, when the user
+        //clicks the button.
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //you can read about what the Snackbar does or
+                //simple try the app on your device or on your emulator.
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -31,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        // it will look for the menu_main.xml file in the menu folder.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -42,8 +55,11 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //did somebody press the settings?
         if (id == R.id.action_settings) {
+            //well, actually we will just display a message to the user here.
+            Toast toast = Toast.makeText(this,"Settings Pressed",Toast.LENGTH_LONG);
+            toast.show();
             return true;
         }
 
