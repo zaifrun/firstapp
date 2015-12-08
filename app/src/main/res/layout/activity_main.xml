@@ -22,6 +22,8 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <!-- this line of code will include any layouts we have
+         in our layout/content_main.xml file -->
     <include layout="@layout/content_main"/>
 
     <android.support.design.widget.FloatingActionButton
