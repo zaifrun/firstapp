@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    /* not used for anything - but just to show some types */
+    private String test = "test";
+    private int number = 2;
+    protected String myName = "martin";
+    private float floating = 1.2f;
 
     //The onCreate method will be called EVERY time
     //our app comes into the foreground view for the user
