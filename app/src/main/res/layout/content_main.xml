@@ -17,5 +17,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
+    <!-- The string above is hardcoded - not best practice, but
+      just to show how it is done directly.
+      Best practice is to put all strings in the
+      values/strings.xml file (for the relevant language) and then
+      refer to the key from the layout files-->
 
 </RelativeLayout>
