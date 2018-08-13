@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         //This line sets the xml file "activity_main" in the layout folder as our main layout
         setContentView(R.layout.activity_main);
         //we find our toolbar (defined in the activity_main.xml file)
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         //we set this as our toolbar
         setSupportActionBar(toolbar);
 
         //We find our floating action button - again defined in the activity_main
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         //we also need to set a listener, so something happens, when the user
         //clicks the button.
         fab.setOnClickListener(new View.OnClickListener() {
